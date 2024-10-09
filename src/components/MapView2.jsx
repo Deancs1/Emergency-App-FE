@@ -83,7 +83,10 @@ const MapView = forwardRef((props, ref) => {
                     position={location}
                     onCloseClick={() => setSelectedPharmacy(null)}
                   >
-                    <div>Your Location</div>
+                    <div>
+                      <p>Your current location</p>
+                      <div>{currentAddress}</div>
+                    </div>
                   </InfoWindowF>
                 )}
               </MarkerF>

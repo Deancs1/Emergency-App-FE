@@ -92,21 +92,6 @@ const DoctorsMap = ({ userLocation }) => {
       >
         Current location
       </button>
-      {/* Render the list of doctors */}
-      <ul className="mt-4 w-full max-w-lg bg-white rounded-lg shadow-lg p-4">
-        {doctors.map((doctor) => (
-          <li
-            key={doctor.id}
-            className="p-4 border-b border-gray-300 last:border-b-0 transition-all hover:bg-gray-100 rounded-lg mb-2"
-          >
-            <h2 className="font-bold text-lg">{doctor.name}</h2>{" "}
-            {/* Assuming doctor object has a name property */}
-            <p className="text-gray-600 text-sm">
-              Distance: {doctor.distance.toFixed(2)} km
-            </p>
-          </li>
-        ))}
-      </ul>
     </div>
   );
 };

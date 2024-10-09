@@ -91,22 +91,6 @@ const PharmaciesMap = ({ userLocation }) => {
       >
         Current location
       </button>
-      {/* Render the list of pharmacies */}
-      <ul className="mt-4 w-full max-w-lg bg-white rounded-lg shadow-lg p-4">
-        {pharmacies.map((pharmacy) => (
-          <li
-            key={pharmacy.id}
-            className="p-4 border-b border-gray-300 last:border-b-0 transition-all hover:bg-gray-100 rounded-lg mb-2 cursor-pointer"
-            onClick={() => handleCenterMap(pharmacy)} // Center map on click
-          >
-            <h2 className="font-bold text-lg">{pharmacy.name}</h2>{" "}
-            {/* Assuming pharmacy object has a name property */}
-            <p className="text-gray-600 text-sm">
-              Distance: {pharmacy.distance.toFixed(2)} km
-            </p>
-          </li>
-        ))}
-      </ul>
     </div>
   );
 };
